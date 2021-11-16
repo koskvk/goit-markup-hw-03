@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+        integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -18,39 +21,52 @@
     <!-- header -->
 
     <header class="heder">
-        <nav class="header-navigation">
-            <a class="logo link" href="./index.html">
-                <span lang="en">Web<span class="logo-heder-color">Studio</span></span></a>
-            <ul class="header-list list">
-                <li class="header-item">
-                    <a href="./index.html" class="header-link link">Студия</a>
-                </li>
-                <li class="header-item">
-                    <a href="./portfolio.html" class="header-link link current">Портфолио</a>
-                </li>
-                <li class="header-item">
-                    <a href="" class="header-link link">Контакты</a>
-                </li>
+        <div class="container">
+            <nav class="header-navigation">
+                <a class="logo link" href="./index.html">
+                    <span lang="en">Web<span class="logo-heder-color">Studio</span></span></a>
+
+                <ul class="header-list list">
+                    <li class="header-item">
+                        <a href="./index.html" class="header-link link">Студия</a>
+                    </li>
+
+                    <li class="header-item">
+                        <a href="./portfolio.html" class="header-link link current">Портфолио</a>
+                    </li>
+
+                    <li class="header-item">
+                        <a href="" class="header-link link">Контакты</a>
+                    </li>
+
+                </ul>
+                
+            </nav>
+            <ul class="contacts-list list">
+                <li><a href="mailto:info@devstudio.com" class="header-contacts link">info@devstudio.com</a></li>
+                <li><a href="tel:+380961111111" class="header-contacts link">+38 096 111 11 11</a></li>
             </ul>
-        </nav>
-        <ul class="contacts-list list">
-            <li><a href="mailto:info@devstudio.com" class="header-contacts link">info@devstudio.com</a></li>
-            <li><a href="tel:+380961111111" class="header-contacts link">+38 096 111 11 11</a></li>
-        </ul>
+        </div>
     </header>
     <!-- Main -->
     <main>
-        <section>
+        <section class="section">
             <h1 class="visually-hidden">Портфолио</h1>
             <ul class="list">
+
                 <li> <button class="portfolio-btn" type="button">Все</button></li>
+
                 <li> <button class="portfolio-btn" type="button">Веб-сайты</button></li>
+
                 <li> <button class="portfolio-btn" type="button">Приложения</button></li>
+
                 <li> <button class="portfolio-btn" type="button">Дизайн</button></li>
+
                 <li> <button class="portfolio-btn" type="button">Маркетинг</button></li>
             </ul>
 
             <ul class="list">
+
                 <li>
                     <a class="link" href="">
                         <img src="./images/portfolio/technocrack.jpg" alt="на экране ноутбука открыт сайт" width="370">
@@ -58,6 +74,7 @@
                         <p class="works-text">Веб-сайт</p>
                     </a>
                 </li>
+
                 <li>
                     <a class="link" href="">
                         <img src="./images/portfolio/neworleanvsgoldenstar.jpg" alt="игра в баскетбол" width="370">
@@ -65,6 +82,7 @@
                         <p class="works-text">Дизайн</p>
                     </a>
                 </li>
+
                 <li>
                     <a class="link" href="">
                         <img src="./images/portfolio/seafood.jpg" alt="логотип ресторана в виде рыбы" width="370">
@@ -72,6 +90,7 @@
                         <p class="works-text">Приложение</p>
                     </a>
                 </li>
+
                 <li>
                     <a class="link" href="">
                         <img src="./images/portfolio/prime.jpg" alt="наушники" width="370">
@@ -79,6 +98,7 @@
                         <p class="works-text">Маркетинг</p>
                     </a>
                 </li>
+
                 <li>
                     <a class="link" href="">
                         <img src="./images/portfolio/boxes.jpg" alt="две коробки" width="370">
@@ -86,6 +106,7 @@
                         <p class="works-text">Приложение</p>
                     </a>
                 </li>
+
                 <li>
                     <a class="link" href="">
                         <img src="./images/portfolio/inspiration.jpg" alt="монитор" width="370">
@@ -93,6 +114,7 @@
                         <p class="works-text">Веб-сайт</p>
                     </a>
                 </li>
+
                 <li>
                     <a class="link" href="">
                         <img src="./images/portfolio/limetededition.jpg" alt="открытая книга" width="370">
@@ -100,6 +122,7 @@
                         <p class="works-text">Дизайн</p>
                     </a>
                 </li>
+
                 <li>
                     <a class="link" href="">
                         <img src="./images/portfolio/lab.jpg" alt="бирка" width="370">
@@ -107,6 +130,7 @@
                         <p class="works-text">Маркетинг</p>
                     </a>
                 </li>
+
                 <li>
                     <a class="link" href="">
                         <img src="./images/portfolio/growing.jpg" alt="человек работает за ноутбуком" width="370">
@@ -114,7 +138,9 @@
                         <p class="works-text">Приложение</p>
                     </a>
                 </li>
+
             </ul>
+
         </section>
     </main>
 

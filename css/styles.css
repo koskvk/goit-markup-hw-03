@@ -7,6 +7,24 @@
   --accent-color: #2196f3;
   --primary-background-color: #2f303a;
   --secondary-background-color: #f5f4fa;
+
+  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -16,12 +34,34 @@ body {
   letter-spacing: 0.03em;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
 .list {
   list-style: none;
 }
 
 .link {
   text-decoration: none;
+}
+
+.no-padding {
+  padding-top: 0;
 }
 
 /*------------ hide title ------------*/
@@ -40,6 +80,22 @@ body {
 
 /*------------ HEADER ------------*/
 
+.header {
+  border: 1px solid #ececec;
+}
+
+.header-container,
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+nav > .logo {
+  margin-right: 93px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -52,12 +108,64 @@ body {
   color: var(--second-color-logo);
 }
 
+.header-navigation {
+  display: flex;
+}
+
+.header-list {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-title-color);
+}
+
 .header-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-title-color);
+}
+
+.header-item {
+  margin-right: 40px;
+}
+
+.header-item:last-child {
+  margin-right: 0px;
+}
+
+.header-item > a {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-item {
+  margin-right: 50px;
+}
+
+.contacts-item:last-child {
+  margin-right: 0px;
+}
+
+.contacts-item > a {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-contacts {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
 }
 
 .header-contacts:hover,
@@ -70,32 +178,28 @@ body {
   color: var(--accent-color);
 }
 
-.header-contacts {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-}
-
 /*------------ HERO ------------*/
 
 .hero-section {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--primary-background-color);
+  text-align: center;
 }
 
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-white-color);
+  margin-bottom: 30px;
 }
 
 .hero-btn {
   cursor: pointer;
+  padding: 10px 32px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -105,11 +209,29 @@ body {
   background-color: var(--accent-color);
   border: 0;
   border-radius: 4px;
+  min-width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /*------------ specifications ------------*/
 
+.specifications-list {
+  display: flex;
+}
+
 .specifications-item {
+  margin-right: 30px;
+  width: 270px;
+  height: 101px;
+}
+
+.specifications-item:last-child {
+  margin-right: 0px;
+}
+
+.specifications-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -122,9 +244,10 @@ body {
   line-height: 1.71;
 }
 
-/*------------ WE DO ------------*/
+/*------------ Section what we do ------------*/
 
 .wedo-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -132,13 +255,46 @@ body {
   color: var(--secondary-title-color);
 }
 
-/*------------ COMAND ------------*/
+.wedo-list {
+  display: flex;
+  align-items: center;
+}
+
+.wedo-item {
+  margin-right: 30px;
+}
+
+.wedo-item:last-child {
+  margin-right: 0px;
+}
+
+/*------------ Section our team ------------*/
 
 .team-section {
   background-color: var(--secondary-background-color);
 }
 
+.team-list {
+  margin-top: -30px;
+  margin-left: -30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-item {
+  margin-left: 30px;
+  margin-top: 30px;
+  min-width: 270px;
+
+  flex-basis: calc(100% / 4 - 30px);
+
+  box-shadow: --card-shadow;
+  border-radius: 0px 0px 4px 4px;
+  background: #ffffff;
+}
+
 .team-title {
+  padding-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -146,7 +302,12 @@ body {
   color: var(--secondary-title-color);
 }
 
+.team-card {
+  padding: 30px;
+}
+
 .team-member {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -166,21 +327,31 @@ body {
   background-color: var(--primary-background-color);
 }
 
+.footer-content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .logo-footer-color {
   color: var(--primary-white-color);
 }
 
 .footer-addres {
+  margin-top: 20px;
+  padding-bottom: 9px;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-white-color);
 }
 
 .footer-contacts {
+  padding-bottom: 9px;
+  font-style: normal;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   color: var(--footer-contacts-color);
 }
 
