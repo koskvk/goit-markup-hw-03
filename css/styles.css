@@ -357,6 +357,10 @@ nav > .logo {
   color: var(--footer-contacts-color);
 }
 
+.footer-contacts:last-child {
+  padding-bottom: 0px;
+}
+
 /*------------ PORTFOLIO BUTTON ------------*/
 
 .portfolio-list-btn {
