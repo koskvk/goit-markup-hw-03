@@ -97,6 +97,7 @@ nav > .logo {
 }
 
 .logo {
+  display: block;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -122,6 +123,7 @@ nav > .logo {
 }
 
 .header-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -161,6 +163,7 @@ nav > .logo {
 }
 
 .header-contacts {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -194,6 +197,9 @@ nav > .logo {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-white-color);
+  width: 696px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 30px;
 }
 
@@ -296,7 +302,7 @@ nav > .logo {
 }
 
 .team-title {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -329,9 +335,13 @@ nav > .logo {
   background-color: var(--primary-background-color);
 }
 
-.footer-content {
+.footer-section {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.container > .logo.link {
+  margin-bottom: 20px;
 }
 
 .logo-footer-color {
@@ -339,8 +349,7 @@ nav > .logo {
 }
 
 .footer-addres {
-  margin-top: 20px;
-  padding-bottom: 9px;
+  margin-bottom: 9px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -349,7 +358,7 @@ nav > .logo {
 }
 
 .footer-contacts {
-  padding-bottom: 9px;
+  display: inline-block;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -357,8 +366,8 @@ nav > .logo {
   color: var(--footer-contacts-color);
 }
 
-.footer-contacts:last-child {
-  padding-bottom: 0px;
+.footer-contacts-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 /*------------ PORTFOLIO BUTTON ------------*/
@@ -366,8 +375,8 @@ nav > .logo {
 .portfolio-list-btn {
   display: flex;
   align-items: center;
-  margin-left: 280px;
-  padding-bottom: 50px;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .portfolio-item-btn {
@@ -393,6 +402,7 @@ nav > .logo {
   border-radius: 4px;
 }
 
+.active,
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   color: var(--primary-white-color);
@@ -409,20 +419,22 @@ nav > .logo {
   display: flex;
   flex-wrap: wrap;
 }
+
 .portfolio-item-works {
   margin-left: 30px;
   margin-top: 30px;
   min-width: 370px;
   flex-basis: calc(100% / 3 - 30px);
-  border: 1px solid #eeeeee;
 }
 
 .card-text {
   padding: 20px 24px 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: 1px solid transparent;
 }
 
 .portfolio-list-title {
-  padding-bottom: 4px;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
